@@ -20,8 +20,8 @@
 <!-- logo section starts -->
 
 <div class="row my-4">
-	<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
-		<img src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/6060e3fcc339c88617e963a3489dfb2c/4047b989-9fd9-44ad-a770-1d507dd1dbe1_rwc_0x0x400x400x4096.gif?h=d6e25581d729dc29a1085cfeed3daa22" class="rounded mx-auto d-block" alt="Site Logo" style="height: 50px;width: 50px;">
+	<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12" id="navbar">
+		<a class="active" href="javascript:void(0)"><img src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/6060e3fcc339c88617e963a3489dfb2c/4047b989-9fd9-44ad-a770-1d507dd1dbe1_rwc_0x0x400x400x4096.gif?h=d6e25581d729dc29a1085cfeed3daa22" class="rounded mx-auto d-block" alt="Site Logo" style="height: 50px;width: 50px;"></a>
 	</div>
 </div>
 
@@ -98,25 +98,52 @@
 
 <div class="row my-5">
 	<div class="col-12 text-center">
-		<img src="https://i.dlpng.com/static/png/6993794_preview.png" class="rounded image mx-auto d-block" alt="..." style="height: 55px;width: 55px;">
+		<a href="#sec"><img src="https://i.dlpng.com/static/png/6993794_preview.png" class="rounded image mx-auto d-block" alt="..." style="height: 55px;width: 55px;"></a>
 		
 	</div>
 </div>
 
 <!-- youtube link -->
 
-<div class="row my-3">
+<!-- <div class="row my-3">
 	<div class="col-2"></div>
 	<div class="col-8 text-center">
 		<iframe width="100%" height="315" src="https://www.youtube.com/embed/1_IYL9ZMR_Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<div class="col-2"></div>
+</div> -->
+<div class="row my-4">
+<div class="col-1">
+	
 </div>
-
+<div class="col-10">
+	<div class="row">
+		<div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 col-xm-12 text-right mt-1  img-tag p-0">
+			<img src="images/1.jpeg" class="img-fluid image" alt="Responsive image">
+			<div class="overlay">
+    <div class="text">sample test paragraph content</div>
+  </div>
+		</div>
+		
+		<div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 col-xm-12 mt-1 img-tag px-1 text-center">
+			<iframe width="100%" height="265" src="https://www.youtube.com/embed/1_IYL9ZMR_Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 col-xm-12 text-left mt-1 img-tag p-0 text-center">
+			<img src="images/6.jpeg" class="img-fluid" alt="Responsive image" width="100%">
+			<div class="overlay">
+    <div class="text">sample test paragraph content</div>
+  </div>
+		</div>
+	</div>
+</div>
+<div class="col-1">
+	
+</div>
+</div>
 <!-- youtube link -->
 
 <!-- photo section -->
-<div class="row my-4">
+<div class="row my-4" id="sec">
 <div class="col-1">
 	
 </div>
@@ -347,6 +374,20 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
 </script>
 </div>
